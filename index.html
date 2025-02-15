@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf8" />
-    <meta name="viewport" content="width=device-width" />
-    <!-- <link rel="icon" type="image/png" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" sizes="192x192" href="icon-192.png">
-    <link rel="icon" sizes="512x512" href="icon-512.png"> -->
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="bundle.css" />
-    <link rel="canonical" href="https://tollef.xyz/" />
-    <link rel="manifest" href="manifest.webmanifest" />
-  </head>
+<html lang="en">
 
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.2/tsparticles.min.js">
-    </script>
-    <script src="bundle.js"></script>
-    <script>
-        if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          'sw.js',
-          {scope: '/'}
-        )
-      }
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&#60;home/&#62;</title>
+  <link rel="icon" type="image/png" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <link rel="icon" sizes="512x512" href="icon-512.png">
+
+  <!-- Font Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <div class="toggle-container">
+    <button class="toggle-button" id="theme-toggle">
+      <span id="theme-prefix"></span>
+      <span id="theme-icon"></span>
+    </button>
+  </div>
+
+  <div class="container">
+    <header class="header">
+      <h1>tollef jørgensen</h1>
+      <!-- <p>Welcome to my personal CV homepage</p> -->
+    </header>
+
+    <section class="introduction">
+      <!-- <p class="maintext typewriter"> -->
+      <p class="text">
+        computer person ("scientist") when i have to, otherwise just a fixer of things.
+      </p>
+    </section>
+
+    <section class="contact">
+      <div class="social-icons">
+        online presence:
+        <a href="https://www.linkedin.com/in/tollefj/" target="_blank" title="LinkedIn">
+          linkedin.
+        </a>
+        <a href="https://github.com/tollefj" target="_blank" title="GitHub">
+          github.
+        </a>
+        <a href="https://scholar.google.com/citations?user=LpJWJnIAAAAJ&hl=en" target="_blank" title="Google Scholar">
+          google scholar.
+      </div>
+    </section>
+  </div>
+
+  <script src="home.js"></script>
+  <script src="scramble.js"></script>
+</body>
+
 </html>
