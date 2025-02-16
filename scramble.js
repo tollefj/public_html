@@ -6,7 +6,7 @@ class TextScramble {
     }
     setText(newText) {
         const oldText = this.el.innerText;
-        const length = oldText.length; // Use the length of the old text
+        const length = max(oldText.length, newText.length);
         const promise = new Promise((resolve) => (this.resolve = resolve));
         this.queue = [];
         for (let i = 0; i < length; i++) {
