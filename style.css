@@ -69,14 +69,7 @@ a:hover {
 .social-icons {
     display: flex;
     gap: 20px;
-    flex-wrap: nowrap;
-}
-
-
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    image-rendering: pixelated;
+    flex-wrap: wrap;
 }
 
 .toggle-container {
