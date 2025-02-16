@@ -31,7 +31,7 @@ prefersDarkScheme.addEventListener("change", (e) => {
 });
 
 document.addEventListener('keydown', function (event) {
-    if (!isMobile && event.key === 'Tab') {
+    if (!isMobile && event.key === 'd') {
         event.preventDefault();
         document.getElementById('theme-toggle').click();
     }
@@ -44,7 +44,7 @@ const themePrefix = document.getElementById("theme-prefix");
 console.log(themeIcon, themePrefix);
 
 
-const prefixDesktop = "press &#60;tab&#62; or click for ";
+const prefixDesktop = "press &#60;d&#62; or click for ";
 const prefixMobile = "click for ";
 
 themePrefix.innerHTML = prefixDesktop;
