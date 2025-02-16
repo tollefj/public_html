@@ -6,7 +6,7 @@ class TextScramble {
     }
     setText(newText) {
         const oldText = this.el.innerText;
-        const length = Math.max(oldText.length, newText.length);
+        const length = oldText.length; // Use the length of the old text
         const promise = new Promise((resolve) => (this.resolve = resolve));
         this.queue = [];
         for (let i = 0; i < length; i++) {
@@ -89,16 +89,46 @@ const phrases = [
     "tweaking hyperparameters like a mad scientist.",
     "sparsity: the dream, dense matrices: the reality."
 ];
+const llmSlander = [
+    "LLMs: excellent at predicting the next word, not so much at understanding it.",
+    "Hallucination isn’t a bug, it’s a feature of overconfident probability distributions.",
+    "Scaling laws say 'bigger is better'; real-world constraints say otherwise.",
+    "Prompt engineering: iterating until the model stumbles onto the right answer.",
+    "Self-attention: a computationally expensive way to rediscover dependencies.",
+    "Training LLMs: when adding more parameters works better than adding more reasoning.",
+    "Fine-tuning: making minor adjustments to a model that already memorized half the internet.",
+    "Instruction tuning: aligning models by selectively reinforcing preferred errors.",
+    "Beam search: picking the least improbable mistake at every step.",
+    "Temperature tuning: deciding between deterministic mistakes and more creative ones.",
+    "Logits: where probability meets misplaced confidence.",
+    "Attention heads: half of them redundant, the other half barely interpretable.",
+    "Emergent abilities: unexpected behaviors we take credit for after the fact.",
+    "Positional encodings: a workaround for transformers’ inability to handle sequence order natively.",
+    "Sparse attention: an attempt to make transformers scalable before we run out of compute.",
+    "Your model isn’t thinking—it’s just reassembling text fragments statistically.",
+    "Layer normalization: an essential trick to keep gradients from going off the rails.",
+    "Multi-modal models: generalizing across modalities, but not necessarily improving at any.",
+    "Batch size tuning: trade-offs between generalization, stability, and blowing up your GPU.",
+    "Transformers: powerful, expensive, and still fundamentally predicting the next token.",
+    "Training dynamics: the art of balancing convergence speed with not overfitting instantly.",
+    "Data augmentation: because real-world datasets are never quite enough.",
+    "Bias mitigation: removing obvious stereotypes while subtler ones persist.",
+    "Reinforcement learning from human feedback: training models to mimic human-approved responses.",
+    "Tokenization errors: where meaning is lost before the model even sees the data.",
+    "Parameter sharing: efficiency gains at the cost of expressiveness.",
+    "The secret to LLMs? More layers, more compute, and hoping generalization holds.",
+    "Explainability: the ongoing challenge of interpreting a model with billions of parameters.",
+    "Compression methods: reducing model size without completely destroying performance.",
+    "Model alignment: making sure AI-generated text remains useful, safe, and not completely off-topic."
+];
 
 const el = document.querySelector(".text");
 const fx = new TextScramble(el);
-
-let counter = 0;
 const next = () => {
-    fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, 1200);
+    const randomIndex = Math.floor(Math.random() * llmSlander.length);
+    fx.setText(llmSlander[randomIndex]).then(() => {
+        setTimeout(next, 3000);
     });
-    counter = (counter + 1) % phrases.length;
 };
 
 next();
