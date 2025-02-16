@@ -68,7 +68,7 @@ const llmSlander = [
     "scaling laws say 'bigger is better'; real-world constraints say otherwise.",
     "convinced my model to speak 50 languages. none of them well.",
     "optimizing inference speed, not my workflow.",
-    "parameter count is not a personality trait (or is it?).",
+    "parameter count is a personality trait.",
     "writing tokenizers, questioning my own comprehension.",
     "emergent abilities: unexpected behaviors we take credit for after the fact.",
     "self-attention, but only for models.",
