@@ -38,13 +38,6 @@ document.addEventListener('keydown', function (event) {
 });
 
 
-//   <div class="toggle-container">
-//     <button class="toggle-button" id="theme-toggle">
-//       <span id="theme-prefix"></span>
-//       <span️ id="theme-icon" />
-//     </button>
-//   </div>
-
 const themeIcon = document.getElementById("theme-icon");
 const themePrefix = document.getElementById("theme-prefix");
 
@@ -58,7 +51,7 @@ themePrefix.innerHTML = prefixDesktop;
 
 function updateThemeIcon() {
     themePrefix.innerHTML = isMobile ? prefixMobile : prefixDesktop;
-    themeIcon.innerHTML = body.classList.contains("dark-mode") ? "☀️-mode" : "🌘-mode";
+    themeIcon.innerHTML = body.classList.contains("dark-mode") ? "🌕-mode" : "🌘-mode";
 }
 
 updateThemeIcon();

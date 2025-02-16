@@ -60,6 +60,7 @@ a:hover {
     bottom: 0;
     width: 100%;
     padding: 10px 20px;
+    margin-bottom: 100px;
 }
 
 .social-icons {
@@ -81,26 +82,6 @@ a:hover {
     image-rendering: pixelated;
 }
 
-/* Animation */
-.animated-text {
-    opacity: 0;
-}
-
-.animate {
-    animation: fadeIn 1.5s forwards;
-}
-
-.no-animation {
-    opacity: 1;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Toggle buttons */
 .toggle-container {
     position: fixed;
     top: 10px;
@@ -117,37 +98,4 @@ a:hover {
     padding: 5px 10px;
     cursor: pointer;
     font-family: inherit;
-}
-
-.typewriter {
-    display: inline-block;
-    overflow: hidden;
-    /* Ensures the content is hidden until the animation reveals it */
-    border-right: 0.15em solid currentColor;
-    /* Creates the cursor effect */
-    white-space: wrap;
-    /* Prevents the text from wrapping to the next line */
-    animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: currentColor;
-    }
 }
